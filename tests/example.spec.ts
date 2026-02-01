@@ -44,6 +44,8 @@ const TEST_DATA: {
   negative: TestCase[];
   ui: UITestCase;
 } = {
+
+  // Below have 10 Negative Sentence
   positive: [
     {
       tcId: 'Pos_Fun_001',
@@ -174,7 +176,7 @@ const TEST_DATA: {
     {
       tcId: 'Pos_Fun_0015',
       name: 'Polite request phrase',
-      input: 'karuNaakaralaa mata potha kiyavanna dhenna puluvandha?',
+      input: 'karuNaakaralaa mata potha kiyavanna dhenna puLuvandha?',
       expected: 'කරුණාකරලා මට පොත කියවන්න දෙන්න පුළුවන්ද?',
       category: 'Daily language usage',
       grammar: 'Compound sentence',
@@ -192,7 +194,7 @@ const TEST_DATA: {
     {
       tcId: 'Pos_Fun_0017',
       name: 'Convert polite request',
-      input: 'karuNaakaralaa mata meka karala dhenna puluvandha?',
+      input: 'karuNaakaralaa mata meeka karalaa dhenna puLuvandha?',
       expected: 'කරුණාකරලා මට මේක කරලා දෙන්න පුළුවන්ද?',
       category: 'Daily language usage',
       grammar: 'Compound sentence',
@@ -201,7 +203,7 @@ const TEST_DATA: {
     {
       tcId: 'Pos_Fun_0018',
       name: 'Convert response phrase',
-      input: 'bohoma sthuthiyi',
+      input: 'bohoma sthuuthiyi',
       expected: 'බොහොම ස්තූතියි',
       category: 'Daily language usage',
       grammar: 'Simple sentence',
@@ -261,9 +263,10 @@ const TEST_DATA: {
       grammar: 'Simple sentence',
       length: 'S'
     }
-    // 👉 (keep all your other positive cases here unchanged)
+
   ],
 
+  // Below have 10 Negative Sentence
   negative: [
     {
       tcId: 'Neg_Fun_0001',
@@ -278,7 +281,7 @@ const TEST_DATA: {
     {
       tcId: 'Neg_Fun_0002',
       name: 'Missing spaces breaks phrase',
-      input: 'kohomadhoyataadha',
+      input: 'kohoomadhoyataadha',
       expected: 'කොහොමදොයටාද',
       category: 'Typographical error handling',
       grammar: 'Simple sentence',
@@ -308,7 +311,7 @@ const TEST_DATA: {
     {
       tcId: 'Neg_Fun_0005',
       name: 'Long paragraph causes partial conversion',
-      input: 'ada kaale godak aya katha karanne hariyata nikan singlish valin vage. eka nisa samahara velavata apita sinhala akuren liyana eka amuthu deyak vage penenna puluvan. eth api ape bhashava hariyata pavichchi karanna igena ganna ona. naththan ape anagatha parapurata sinhala bhashava nathi vela yanna puluvan kamak thiyenava neda? eka nisa hamoma sinhala akurenma liyanna purudu venna ona kiyala mama hithanava. meka thama mage adahasa.',
+      input: 'ada kale godak aya katha karanne hariyata nikan singlish valin vage. eka nisa samahara velavata apita sinhala akuren liyana eka amuthu deyak vage penenna puluvan. eth api ape bhashava hariyata pavichchi karanna igena ganna ona. naththan ape anagatha parapurata sinhala bhashava nathi vela yanna puluvan kamak thiyenava neda? eka nisa hamoma sinhala akurenma liyanna purudu venna ona kiyala mama hithanava. meka thama mage adahasa.',
       expected: 'අඩ කාලෙ ගොඩක් අය කත කරන්නේ හරියට නිකන් සින්ග්ලිශ් වලින් වගෙ. එක නිස සමහර වෙලවට අපිට sinhala අකුරෙන් ලියන එක අමුතු ඩෙයක් වගෙ පෙනෙන්න පුලුවන්. එත් අපි ape බ්හශව හරියට පවිච්චි කරන්න ඉගෙන ගන්න ඔන. නත්තන් ape අනගත පරපුරට sinhala බ්හශව නති වෙල යන්න පුලුවන් කමක් තියෙනව නෙඩ? එක නිස හමොම sinhala අකුරෙන්ම ලියන්න පුරුඩු වෙන්න ඔන කියල මම හිතනව. මෙක තම mage අඩහස.',
       category: 'Typographical error handling',
       grammar: 'Complex sentence',
@@ -327,7 +330,7 @@ const TEST_DATA: {
     {
       tcId: 'Neg_Fun_0007',
       name: 'Multiple spaces distort conversion',
-      input: 'mama   gedhara    yanavaa.',
+      input: 'mama   gedhara    yanava.',
       expected: 'මම   ගෙදර    යනවා.',
       category: 'Typographical error handling',
       grammar: 'Simple sentence',
@@ -364,7 +367,7 @@ const TEST_DATA: {
       length: 'M'
       
     },
-    // 👉 (keep all your other negative cases here unchanged)
+  
   ],
 
   ui: {
